@@ -1,0 +1,230 @@
+/* header css */
+.header {
+   background-color: rgb(255,139,98);
+}
+
+.header > img {
+    width: 1.6em;
+    margin-left: 1em;
+}
+
+/* banner css. includes aligning the 'buy' and 'sell' border images, logo and the text */ 
+.features {
+    width: 5.5em;
+    margin-top: 1.3em;
+}
+
+#buy {
+    float: right;
+}
+
+/*menubar css */
+.menubar > a {
+    margin-right: 2em;
+    margin-left: 2em;
+    letter-spacing: 0.2em;
+    color: grey;
+    font-family: serif;
+    font-size: 0.9em;
+    font-weight: 550;
+}
+
+.menubar {
+    padding-bottom: 1em;
+}
+/*frame css */
+.frame {
+    /* background-color: lightgray; */
+}
+
+/* first a.k.a introductory panel css */
+.intro { 
+    background-image: url(images/cityscapeSample.jpg);
+    background-size: cover;
+    max-height: 100%;
+    max-width: 100%;
+    color: white;
+    margin-bottom: 3em;
+}
+
+.caption, #captionOne {
+    padding-top: 2em;
+    text-transform: uppercase;
+}
+
+.introContent {
+    justify-content: center;
+    margin-top: 4.5em;
+}
+
+/* customise the buttons and the hover color */
+.caption > button, .workWithUsButton, .acquaintButton, .meetTheTeamButton {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    margin-top: 1em;
+}
+
+/*to make the buttons highlight over focus/hover */
+.button.traditionButton:hover, .button.traditionButton:focus, .button.workWithUsButton:hover, .button.workWithUsButton:focus, .button.acquaintButton:hover, .button.acquaintButton:focus, .button.meetTheTeamButton:hover, .button.meetTheTeamButton:hover {
+background-color: darkgray;
+}
+
+.contentOne{
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+#paragraphOne{
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+
+#contentTwo {
+    margin-top: 4em;
+    font-size: 1.7em;
+    font-family: serif;
+}
+
+/* second panel a.k.a statistics panel css */
+.stats, .strategy {
+    color: dimgray; 
+}
+
+.statsContent {
+    margin-top: 3em;
+}
+
+.captionTwo, .captionThree {
+    text-transform: uppercase;
+    padding-top: 4em;
+    margin-top: 1.5em;
+}
+
+#subcaptionTwo, #subcaptionThree, #subcaptionFour, .subCaption {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+#captionTwoContent, #captionThreeContent {
+    font-family: serif;
+    letter-spacing: 0.1em;
+}
+
+.stats, .statsContent, .cards, .strategy {
+    justify-content: center;
+}
+
+.lead {
+    font-size: 2.3em;
+    font-weight: 300;
+    text-align: center;
+}
+
+#subcaptionFour {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.captionContent {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.cardImages {
+    width: 3em;
+    height: 3em;
+    /*how to center an image!! */
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* strategy class css */
+.strategyContent > .cards > .lead {
+    font-size: 1.5em;
+}
+
+/*testing if there is gap between each grid */
+/*.sections {
+    border-bottom-style: double;
+    border-top-style: dashed;
+}*/
+
+.workWithUs, .meetTheTeam {
+    background-color: grey;
+    justify-content: center;
+}
+
+.strategyContent {
+    margin-top: 3em;
+}
+
+/*acquaint panel css */
+
+.acquaint {
+    background-image: url(images/home-genuine-photo.jpg);
+    background-size: cover;
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.quote {
+    font-family: serif;
+    font-size: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.captionFour {
+    margin-top: 8em;
+    color: white;
+}
+
+.acquaintButton {
+    margin-bottom: 9em;
+}
+
+/*footer panel css */
+.footer {
+    padding-top: 7em;
+    background-color: gray;
+    color: white;
+}
+
+td {
+    background-color: gray;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+}
+
+td > h3 {
+    font-size: 2em;
+    font-weight: 300;
+}
+table {
+   border-style: dashed;
+}
+
+.disclaimer { 
+    color: white;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.statement {
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
+    margin-top: 2em;
+}
