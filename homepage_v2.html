@@ -13,12 +13,6 @@
         
         <!--zurb foundation javascript -->
         <script src="foundation-6.4.2-complete/js/app.js"></script>
-        
-        <!--flickity javascript -->
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
-
-        <!-- flickity css-->    
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
     </head>
     <body>
         <!-- header containing social network logos. first version contains facebook, youtube, twitter and linkedIn -->
@@ -33,8 +27,21 @@
         
         <!--grid with sell, buy and logo with title. need a logo with better clarity -->
         <div class="grid-container large-12 medium-12 small-12 fluid full mast">
-            <img class="features" id="sell" src="images/sell_on_hover.png" alt="sell">
-            <img class="features" id="buy" src="images/buy_on_hover.png" alt="buy">
+            <a href=#>
+                <!--creating a div for both 'buy' and 'sell' to fix the image and to layover the text. on hover, the image should change and the text should be of a different color to indicate it's active -->
+                <div class="placeholderSell">
+                    <!--<img class="features" id="sell" src="images/sell.png" alt="sell">
+                    <img class="featuresOnHover" id="sellOnHover" src="images/sell_on_hover.png" alt="sell on hover">-->
+                    <p class="featureHover" id="sellOnHover">SELL</p>
+                </div>
+            </a>
+            <a href=#>
+                <div class="placeholderBuy">
+                    <!--<img class="features" id="buy" src="images/buy.png" alt="buy">
+                    <img class="featuresOnHover" id="buyOnHover" src="images/buy_on_hover.png" alt="buy on hover">-->
+                    <p class="featureHover" id="buyOnHover">BUY</p>
+                </div>
+            </a>
             <div class="logo text-center">
                 <img src="images/brand.png" alt="AGC logo and title"> <!-- Need a logo of this size in finer resolution -->
             </div>
@@ -82,18 +89,16 @@
                         </div>
                 </div>
             </div>
-        
-            <!--grid for carousel -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections meetTheTeam">
-                <div class="large-10 medium-10 small-10 text-center sliderCaption">
-                    <h2 id="captionFourContent">Our sales team</h2>
-                    <p id="agentSubCaption">sales &amp; resident foodie</p>
-                    <h3 id="agentName">Sarah Brinkmann</h3>
-                </div>    
-            
-        
+
+            <!--grid for statistics-->
+            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
+                <div class="large-10 medium-10 small-10 text-center captionTwo">
+                    <h2 id="captionTwoContent">our sales team</h2>
+                </div>
+        </div>
+    
             <!--grid for 'meet the team' button -->
-                
+            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections meetTheTeam">
                 <button class="button meetTheTeamButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
             </div>
         
@@ -132,6 +137,7 @@
             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
                 <div class="large-10 medium-10 small-10 text-center captionFour">
                     <p id="subcaptionFour">&#45;Jennifer Ames&#45;</p>
+                    <!--no captionFour -->
                     <h2 class="quote"><q>Above all, we believe in the values of being genuine and honest.</q></h2>         
                     <button class="button acquaintButton" href="#">let's get acquainted<img src="images/long-arrow.png"></button>
                 </div>
@@ -172,8 +178,7 @@
                 </div>
                  <div class="cell small-12 medium-12 large-12 disclaimer">
                         <img src="images/coldwell-banker-logo.png" id="coldwellBankerLogo"> 
-                        <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a href="#">DISCLAIMER</a></p>
+                        <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
                 </div>
-            </div>
-           
+            </div> 
     </body>

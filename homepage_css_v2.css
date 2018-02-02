@@ -1,3 +1,5 @@
+@include motion-ui-transitions;
+
 /* header css */
 .header {
    background-color: rgb(255,139,98);
@@ -8,14 +10,49 @@
     margin-left: 1em;
 }
 
-/* banner css. includes aligning the 'buy' and 'sell' border images, logo and the text */ 
-.features {
-    width: 5.5em;
-    margin-top: 1.3em;
+/* banner css */
+/* css for hover effects including background and text color change */
+#sellOnHover, #buyOnHover {
+    margin-top: 1.6em;
+    letter-spacing: 0.2em;
+    color: rgb(255,139,98);
+    font-weight: 600;
 }
 
-#buy {
+.placeholderSell {
+    float: left;
+}
+
+#sellOnHover {
+    background-image: url(images/sell.png);
+    background-size: cover;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1.5em;
+    padding-left: 0.3em;
+}
+
+#sellOnHover:hover {
+    background-image: url(images/sell_on_hover.png);
+    color: darkred;
+}
+
+.placeholderBuy {
     float: right;
+}
+
+#buyOnHover {
+    background-image: url(images/buy.png);
+    background-size: cover;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.8em;
+    padding-right: 0.3em;
+}
+
+#buyOnHover:hover {
+    background-image: url(images/buy_on_hover.png);
+    color: darkred;
 }
 
 /*menubar css */
@@ -26,7 +63,11 @@
     color: grey;
     font-family: serif;
     font-size: 0.9em;
-    font-weight: 550;
+    font-weight: 500;
+}
+
+.menubar > a:hover {
+    color: rgb(255,139,98);
 }
 
 .menubar {
@@ -153,12 +194,6 @@ background-color: darkgray;
     font-size: 1.5em;
 }
 
-/*testing if there is gap between each grid */
-/*.sections {
-    border-bottom-style: double;
-    border-top-style: dashed;
-}*/
-
 .workWithUs, .meetTheTeam {
     background-color: grey;
     justify-content: center;
@@ -166,6 +201,12 @@ background-color: darkgray;
 
 .strategyContent {
     margin-top: 3em;
+}
+
+/* slider panel css */
+.slider {
+    margin-top: 3em;
+    background-color: skyblue;
 }
 
 /*acquaint panel css */
@@ -227,4 +268,12 @@ table {
     font-size: 0.6em;
     letter-spacing: 0.1em;
     margin-top: 2em;
+}
+
+#disclaimer {
+    color: whitesmoke;
+}
+
+#disclaimer:hover { 
+    font-weight: 600;
 }
