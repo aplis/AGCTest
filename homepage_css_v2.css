@@ -146,7 +146,7 @@ background-color: darkgray;
     margin-top: 1.5em;
 }
 
-#subcaptionTwo, #subcaptionThree, #subcaptionFour, .subCaption {
+#subcaptionTwo, #subcaptionThree, #subcaptionFour, .subCaption, #subCaptionAgent {
     font-size: 0.8em;
     letter-spacing: 0.2em;
     text-align: center;
@@ -276,4 +276,41 @@ table {
 
 #disclaimer:hover { 
     font-weight: 600;
+}
+
+/*testing flickity.css for carousel*/
+/* external css: flickity.css */
+
+.carousel {
+  background: #FFFFFF;
+    margin-bottom: 2em;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #FFFFFF;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+#agentName {
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0.1em;
 }

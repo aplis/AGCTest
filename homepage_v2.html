@@ -13,6 +13,12 @@
         
         <!--zurb foundation javascript -->
         <script src="foundation-6.4.2-complete/js/app.js"></script>
+        
+        <!--flickity css -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+        
+        <!--flickity javascript-->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
     </head>
     <body>
         <!-- header containing social network logos. first version contains facebook, youtube, twitter and linkedIn -->
@@ -94,13 +100,42 @@
             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
                 <div class="large-10 medium-10 small-10 text-center captionTwo">
                     <h2 id="captionTwoContent">our sales team</h2>
+                    <br>
+                    <p id="subCaptionAgent">sales &amp; resident foodie</p>
+                    <h2 id="agentName">Sarah Brinkmann</h2>
+                    <br>
+                    <div class="carousel" data-flickity='{ "wrapAround": true, "lazyLoad": true, "autoplay":true }'>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/tulip.jpg" alt="tulip" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/grapes.jpg" alt="grapes" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+                              data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/raspberries.jpg" alt="raspberries" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/wolf.jpg" alt="wolf" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/shore.jpg" alt="sea" />
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image"
+      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/leaf-droplets.jpg" alt="leaf droplets" />
+                        </div>
+                    </div>
                 </div>
-        </div>
-    
-            <!--grid for 'meet the team' button -->
+                <!--grid for 'meet the team' button -->
             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections meetTheTeam">
                 <button class="button meetTheTeamButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
             </div>
+        </div>
         
             <!--grid for strategy-->
             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections">
