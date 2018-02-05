@@ -17,6 +17,9 @@
         <!--flickity css -->
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
         
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
         <!--flickity javascript-->
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
     </head>
@@ -96,40 +99,23 @@
                 </div>
             </div>
 
-            <!--grid for statistics-->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
+            <!--grid for carousel to display the team members-->
+            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full team sections">
                 <div class="large-10 medium-10 small-10 text-center captionTwo">
                     <h2 id="captionTwoContent">our sales team</h2>
                     <br>
-                    <p id="subCaptionAgent">sales &amp; resident foodie</p>
-                    <h2 id="agentName">Sarah Brinkmann</h2>
-                    <br>
-                    <div class="carousel" data-flickity='{ "wrapAround": true, "lazyLoad": true, "autoplay":true }'>
-                        <div class="carousel-cell">
-                            <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/tulip.jpg" alt="tulip" />
-                        </div>
-                        <div class="carousel-cell">
-                            <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/grapes.jpg" alt="grapes" />
-                        </div>
-                        <div class="carousel-cell">
-                            <img class="carousel-cell-image"
-                              data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/raspberries.jpg" alt="raspberries" />
-                        </div>
-                        <div class="carousel-cell">
-                            <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/wolf.jpg" alt="wolf" />
-                        </div>
-                        <div class="carousel-cell">
-                            <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/shore.jpg" alt="sea" />
-                        </div>
-                        <div class="carousel-cell">
-                            <img class="carousel-cell-image"
-      data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/leaf-droplets.jpg" alt="leaf droplets" />
-                        </div>
+                    <p class="subCaptionAgent">sales &amp; resident foodie</p>
+                    
+                    <h2 class="agentName">&nbsp;</h2>
+                    <div class="carousel" data-flickity='{"autoPlay": true, "wrapAround": true}'>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
                     </div>
+
                 </div>
                 <!--grid for 'meet the team' button -->
             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections meetTheTeam">
@@ -168,7 +154,7 @@
                 <button class="button workWithUsButton" href="#">work with us<img src="images/long-arrow.png"></button>
             </div>
         
-            <!--grid for acquainted panel -->
+            <!--grid for 'acquainted' panel -->
             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
                 <div class="large-10 medium-10 small-10 text-center captionFour">
                     <p id="subcaptionFour">&#45;Jennifer Ames&#45;</p>
@@ -216,4 +202,42 @@
                         <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
                 </div>
             </div> 
-    </body>
+    </body> 
+    <script>
+        var $carousel = $('.carousel').flickity({
+  cellSelector: 'img',
+  imagesLoaded: true,
+  percentPosition: false
+});
+var $caption = $('.agentName');
+var $subCaption = $('.subCaptionAgent');
+// Flickity instance
+var flkty = $carousel.data('flickity');
+
+$carousel.on( 'select.flickity', function() {
+  // set image caption using img's alt
+    var $displayText = flkty.selectedElement.alt;
+  $caption.text( $displayText );
+    if ($displayText.toLowerCase() === 'orange tree'.toLowerCase()) {
+        $subCaption.text('caption 1');
+    }
+    else if ($displayText.toLowerCase() === 'submerged'.toLowerCase()) {
+        $subCaption.text('caption 2');
+    }
+    else if ($displayText.toLowerCase() === 'look-out'.toLowerCase()) {
+        $subCaption.text('caption 3');
+    }
+    else if ($displayText.toLowerCase() === 'ONe World Trade'.toLowerCase()) {
+        $subCaption.text('caption 4');
+    }
+    else if ($displayText.toLowerCase() === 'drizzle'.toLowerCase()) {
+        $subCaption.text('caption 5');
+    }
+    else if ($displayText.toLowerCase() === 'cAT NOSe'.toLowerCase()) {
+        $subCaption.text('caption 6');
+    }
+});
+
+
+    </script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Silpa Vipparti">
+        <meta name="description" content="AGC home page v2.0">
+        
+        <!--trying out zurb foundation for the first time -->
+        <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
+        
+        <!--personalised css -->
+        <link rel="stylesheet" href="homepage_css_v2.css">
+        
+        <!--zurb foundation javascript -->
+        <script src="foundation-6.4.2-complete/js/app.js"></script>
+        
+        <!--flickity css -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!--flickity javascript-->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+    </head>
+    <body>
+        <h1>Flickity - images</h1>
+        <!-- Flickity HTML init -->
+        <div class="carousel">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
+        </div>
+        <p class="caption">Orange Tree</p>
+        
+            <script>
+               var $carousel = $('.carousel').flickity({
+                   cellSelector: 'img',
+                   imagesLoaded: true,
+                   percentPosition: false
+               });
+                var $caption = $('.caption');
+// Flickity instance
+                var flkty = $carousel.data('flickity');
+                $carousel.on( 'select.flickity', function() {
+  // set image caption using img's alt
+                    $caption.text( flkty.selectedElement.alt )
+                });
+        </script>
+
+    </body>
+</html>

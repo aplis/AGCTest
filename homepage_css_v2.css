@@ -132,7 +132,7 @@ background-color: darkgray;
 }
 
 /* second panel a.k.a statistics panel css */
-.stats, .strategy {
+.stats, .strategy, .team {
     color: dimgray; 
 }
 
@@ -146,7 +146,7 @@ background-color: darkgray;
     margin-top: 1.5em;
 }
 
-#subcaptionTwo, #subcaptionThree, #subcaptionFour, .subCaption, #subCaptionAgent {
+#subcaptionTwo, #subcaptionThree, #subcaptionFour, .subCaption, .subCaptionAgent {
     font-size: 0.8em;
     letter-spacing: 0.2em;
     text-align: center;
@@ -157,7 +157,7 @@ background-color: darkgray;
     letter-spacing: 0.1em;
 }
 
-.stats, .statsContent, .cards, .strategy {
+.stats, .statsContent, .cards, .strategy, .team {
     justify-content: center;
 }
 
@@ -281,7 +281,7 @@ table {
 /*testing flickity.css for carousel*/
 /* external css: flickity.css */
 
-.carousel {
+/*.carousel {
   background: #FFFFFF;
     margin-bottom: 2em;
 }
@@ -301,16 +301,41 @@ table {
   opacity: 0;
   -webkit-transition: opacity 0.4s;
           transition: opacity 0.4s;
-}
+} */
 
 /* fade in lazy loaded image */
-.carousel-cell-image.flickity-lazyloaded,
+/* .carousel-cell-image.flickity-lazyloaded,
 .carousel-cell-image.flickity-lazyerror {
   opacity: 1;
-}
+} */
 
-#agentName {
+.agentName {
     font-weight: 300;
     text-transform: none;
     letter-spacing: 0.1em;
+}
+
+/* external css: flickity.css */
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+.carousel {
+    background: #FFF;
+    margin-bottom: 2em;
+}
+
+.carousel img {
+  display: block;
+  height: 200px;
+    margin: 1.5em;
+    width: 50%;
+    border-radius: 0.5em;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 400px;
+  }
 }
