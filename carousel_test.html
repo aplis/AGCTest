@@ -5,14 +5,8 @@
         <meta name="author" content="Silpa Vipparti">
         <meta name="description" content="AGC home page v2.0">
         
-        <!--trying out zurb foundation for the first time -->
-        <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
-        
         <!--personalised css -->
         <link rel="stylesheet" href="homepage_css_v2.css">
-        
-        <!--zurb foundation javascript -->
-        <script src="foundation-6.4.2-complete/js/app.js"></script>
         
         <!--flickity css -->
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
@@ -21,34 +15,64 @@
         
         <!--flickity javascript-->
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+        
+        <!--trying out zurb foundation for the first time -->
+        <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
+        
+        <!--zurb foundation javascript -->
+        <script src="foundation-6.4.2-complete/js/app.js"></script>
     </head>
     <body>
-        <h1>Flickity - images</h1>
-        <!-- Flickity HTML init -->
-        <div class="carousel">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
-        </div>
-        <p class="caption">Orange Tree</p>
-        
-            <script>
-               var $carousel = $('.carousel').flickity({
-                   cellSelector: 'img',
-                   imagesLoaded: true,
-                   percentPosition: false
-               });
-                var $caption = $('.caption');
-// Flickity instance
-                var flkty = $carousel.data('flickity');
-                $carousel.on( 'select.flickity', function() {
-  // set image caption using img's alt
-                    $caption.text( flkty.selectedElement.alt )
-                });
-        </script>
+<!-- This demo uses flex grid but you can use float grid too -->
+
+<div class="row">
+  <div class="columns">
+    <h2>Horizontal Tabs</h2>
+    <p>There are two pieces to a tabbed interface: the tabs themselves, and the content for each tab. The tabs are an element with the class <code>.tabs</code>, and each item has the class <code>.tabs-title</code>. Each tab contains a link to a tab. The <code>href</code> of each link should match the ID of a tab.</p>
+    <p>The tab content container has the class <code>.tabs-content</code>, while each section has the class <code>.tabs-panel</code>. Each content pane also has a unique ID, which is targeted by a link in the tabstrip.</p>
+    <p>Put it all together, and we get this:</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns">
+    <ul class="tabs" data-tabs id="example-tabs">
+      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+      <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
+      <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
+      <li class="tabs-title"><a href="#panel4">Tab 4</a></li>
+      <li class="tabs-title"><a href="#panel5">Tab 5</a></li>
+      <li class="tabs-title"><a href="#panel6">Tab 6</a></li>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="example-tabs">
+      <div class="tabs-panel is-active" id="panel1">
+        <p>One</p>
+        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+      </div>
+      <div class="tabs-panel" id="panel2">
+        <p>Two</p>
+        <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-7.jpg">
+      </div>
+      <div class="tabs-panel" id="panel3">
+        <p>Three</p>
+        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+      </div>
+      <div class="tabs-panel" id="panel4">
+        <p>Four</p>
+        <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-2.jpg">
+      </div>
+      <div class="tabs-panel" id="panel5">
+        <p>Five</p>
+        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+      </div>
+      <div class="tabs-panel" id="panel6">
+        <p>Six</p>
+        <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-8.jpg">
+      </div>
+    </div>
+  </div>
+</div>
 
     </body>
 </html>

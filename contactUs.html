@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Silpa Vipparti">
+        <meta name="description" content="AGC Contact Us Page version 1.0">
+        
+        <!--trying out zurb foundation for the first time -->
+        <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
+        
+        <!--personalised css -->
+        <link rel="stylesheet" href="homepage_css_v2.css">
+        
+        <!--zurb foundation javascript -->
+        <script src="foundation-6.4.2-complete/js/app.js"></script>
+        
+        <!--flickity css -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+        
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!--flickity javascript-->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+        
+        <style>
+            .menubar {
+                border-bottom-style: double;
+                border-bottom-color: lightgrey;
+            }
+            /*contact Us form css */
+            
+.form-floating-label {
+  position: relative;
+  
+}
+
+.form-floating-label [type='text'],
+.form-floating-label [type='password'],
+.form-floating-label [type='date'],
+.form-floating-label [type='datetime'],
+.form-floating-label [type='datetime-local'],
+.form-floating-label [type='month'],
+.form-floating-label [type='week'],
+.form-floating-label [type='email'],
+.form-floating-label [type='number'],
+.form-floating-label [type='search'],
+.form-floating-label [type='tel'],
+.form-floating-label [type='time'],
+.form-floating-label [type='url'],
+.form-floating-label [type='color'],
+.form-floating-label textarea {
+  margin-bottom: 0;
+  color: #8a8a8a;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 30px 1rem 1rem 25px;
+}
+
+.form-floating-label label {
+  color: #cacaca;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 25px;
+  bottom: 0;
+  transition: all 0.2s ease-in;
+  font-weight: 300;
+}
+
+.form-floating-label textarea ~ label {
+  top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form-floating-label input:focus ~ label,
+.form-floating-label input:disabled[value] ~ label,
+.form-floating-label.has-value input ~ label {
+  top: 0;
+  font-size: 14px;
+  color: dodgerblue;
+  font-weight: 400;
+}
+
+.form-floating-label textarea:focus ~ label,
+.form-floating-label.has-value textarea ~ label {
+  top: 0;
+  font-size: 14px;
+  color: dodgerblue;
+  font-weight: 400;
+}
+            
+            .contactForm {
+                padding-top: 3em;
+                padding-bottom: 3em;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!-- header containing social network logos. first version contains facebook, youtube, twitter and linkedIn -->
+        <div class="grid-x grid-padding-x">
+            <div class="medium-12 large-12 cell header">
+                <img id="connectFb" src="images/FB-f-Logo__blue_100.png">  
+                <img id="connectYt" src="images/yt_icon_mono_dark.png">
+                <img id="connectTw" src="images/Twitter_Logo_WhiteOnBlue.png">
+                <img id="connectLd" src="images/In-White-41px-TM.png">
+            </div>
+        </div>
+        
+        <!--grid with sell, buy and logo with title. need a logo with better clarity -->
+        <div class="grid-container large-12 medium-12 small-12 fluid full mast">
+            <a href=#>
+                <!--creating a div for both 'buy' and 'sell' to fix the image and to layover the text. on hover, the image should change and the text should be of a different color to indicate it's active -->
+                <div class="placeholderSell">
+                    <!--<img class="features" id="sell" src="images/sell.png" alt="sell">
+                    <img class="featuresOnHover" id="sellOnHover" src="images/sell_on_hover.png" alt="sell on hover">-->
+                    <p class="featureHover" id="sellOnHover">SELL</p>
+                </div>
+            </a>
+            <a href=#>
+                <div class="placeholderBuy">
+                    <!--<img class="features" id="buy" src="images/buy.png" alt="buy">
+                    <img class="featuresOnHover" id="buyOnHover" src="images/buy_on_hover.png" alt="buy on hover">-->
+                    <p class="featureHover" id="buyOnHover">BUY</p>
+                </div>
+            </a>
+            <div class="logo text-center">
+                <img src="images/ACG_Logo_Green.png" alt="AGC logo and title"> <!-- Need a logo of this size in finer resolution -->
+            </div>
+        </div>
+        
+        <!-- grid for menubar. Currently contiaing "Our approach" and "Contact Us" options -->
+        <div class="grid-container large-12 medium-12 text-center fluid full menubar">
+            <a id="approach" href="#">OUR APPROACH</a>
+            <a id="contactUs" href="contactUs.html">CONTACT US</a>
+        </div>
+        
+        <!-- breadcrumbs section -->
+        <div class="grid-container large-12 medium-12 fluid full breadcrumbs">
+            <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                    <li><a href="homepage_v2.html">Home</a></li>
+                    <li>
+                        <span class="show-for-sr">Current: </span> Contact Us
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- phone and fax numbers banner -->
+        <div class="grid-container large-12 medium-12 text-center fluid full phoneFaxBanner sections">
+            <p><span class="tag">Phone </span><span class="numbers">(312) 440-7525      &#124;</span> <span class="tag">Fax </span><span class="numbers">(312) 440-7535</span></p>
+        </div>
+        
+        <!--grid for 'contact us' form -->
+        <div class="grid-container large-8 medium-8 small-8 text-center fluid full contactUs">
+            <form class="contactForm" action="">
+  <div class="row">
+    <div class="small-12 column">
+      <div class="form-floating-label">
+        <input type="email" id="email" name="email" required>
+        <label for="email">Your Name</label>
+      </div>
+    </div>
+    <div class="small-12 column">
+      <div class="form-floating-label">
+        <input type="text" id="password" name="password">
+        <label for="password">Your Message</label>
+      </div>
+    </div>
+    <div class="small-12 column">
+      <div class="form-floating-label">
+        <input type="tel" id="tel" name="tel">
+        <label for="tel">Your Email Address</label>
+      </div>
+    </div>
+    <div class="small-12 column">
+      <div class="form-floating-label">
+        <textarea name="" id="" rows="5" placeholder=""></textarea>
+        <label for="textarea">Your Phone Number</label>
+      </div>
+    </div>
+  </div>
+</form>
+        </div>
+            
+        
+        
+        <!-- grid for displaying address -->
+        <div class="grid-x grid-container large-12 medium-12 small-12 fluid full address sections">
+            <p class="contactAddress"><span class="tag">coldwell banker &#124; lincoln park plaza<br></span>
+            1910 North Clybourn Avenue<br>Chicago, Il 60614</p>
+        </div>
+        
+        <!--grid for footer panel -->
+        <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections footer">
+            <div class="cell small-12 medium-12 large-5 contact">
+                    <!--footer logo and caption needed-->
+                    <!--social network logos in white needed with a circular frame. phase 1 requires fb, twitter, youtube and linkedin -->
+            </div>
+            <div class="cell small-12 medium-12 large-7 footerTable">
+                <table>
+                    <tr class="tableRow">
+                        <td><h3>About</h3></td>
+                        <td><h3>Homes</h3></td> 
+                        <td><h3>Our Approach</h3></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>MEET JENNY</td>
+                        <td>COLLECTIONS</td> 
+                        <td>SELL WITH US</td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>COLDWELL BANKER</td>
+                        <td>HOMES</td> 
+                        <td>BUY WITH US</td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>OUR TEAM</td>
+                        <td></td> 
+                        <td>CONTACT US</td>
+                    </tr>           
+                    <tr class="tableRow">
+                        <td>PRESS</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cell small-12 medium-12 large-12 disclaimer">
+                <img src="images/coldwell-banker-logo.png" id="coldwellBankerLogo"> 
+                <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
+            </div>
+        </div>
+    </body>
+    <script>
+    $('.form-floating-label input, .form-floating-label textarea').focusin(function(){
+  $(this).parent().addClass('has-value');
+});
+
+$('.form-floating-label input, .form-floating-label textarea').blur(function(){
+  if(!$(this).val().length > 0) {
+    $(this).parent().removeClass('has-value');
+  }
+});
+
+
+    </script>
+</html>
