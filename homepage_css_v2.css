@@ -10,13 +10,24 @@
     margin-left: 1em;
 }
 
+.logo {
+    padding-top: 3em;
+}
+
+/* breadcrumbs css */
+.breadcrumbs {
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+}
+
 /* banner css */
 /* css for hover effects including background and text color change */
 #sellOnHover, #buyOnHover {
-    margin-top: 1.6em;
+    margin-top: 2em;
     letter-spacing: 0.2em;
     color: rgb(255,139,98);
     font-weight: 600;
+    font-size: 1.1em;
 }
 
 .placeholderSell {
@@ -26,10 +37,7 @@
 #sellOnHover {
     background-image: url(images/sell.png);
     background-size: cover;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-right: 1.5em;
-    padding-left: 0.3em;
+    padding: 0.9em 2.5em 1em 0.9em;
 }
 
 #sellOnHover:hover {
@@ -44,10 +52,11 @@
 #buyOnHover {
     background-image: url(images/buy.png);
     background-size: cover;
-    padding-top: 0.5em;
+    padding: 0.9em 0.9em 1em 2.8em;
+    /*padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 1.8em;
-    padding-right: 0.3em;
+    padding-right: 0.3em;*/
 }
 
 #buyOnHover:hover {
@@ -56,23 +65,48 @@
 }
 
 /*menubar css */
-.menubar > a {
-    margin-right: 2em;
-    margin-left: 2em;
-    letter-spacing: 0.2em;
-    color: grey;
-    font-family: serif;
+.hover-underline-menu {
+  width: 100%;
+}
+
+.hover-underline-menu .menu {
+    border-style: none;
+    margin-top: 0.6em;
+}
+
+.hover-underline-menu .menu a {
+  color: rgb(255,139,98);
+    font-weight: 700;
     font-size: 0.9em;
-    font-weight: 500;
+    letter-spacing: 0.1em;
+  padding: 1.2rem 1.5rem;
+    font-family: serif;
 }
 
-.menubar > a:hover {
-    color: rgb(255,139,98);
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
 }
 
-.menubar {
-    padding-bottom: 1em;
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid rgb(255,139,98);
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
 }
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+.tabs-title {
+    padding-right: 0.5em;
+}
+
 /*frame css */
 .frame {
     /* background-color: lightgray; */
@@ -95,13 +129,13 @@
 
 .introContent {
     justify-content: center;
-    margin-top: 4.5em;
+    margin-top: 3.5em;
 }
 
 /* customise the buttons and the hover color */
 .caption > button, .workWithUsButton, .acquaintButton, .meetTheTeamButton {
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 1.2em;
     letter-spacing: 0.1em;
     background-color: transparent;
     border-style: solid;
@@ -109,9 +143,24 @@
     margin-top: 1em;
 }
 
+.appContentButton {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    border-style: solid;
+    background-color: rgb(255,139,98);
+    border-color: rgb(255,139,98);
+    color: white;
+    margin-top: 1em;
+}
+
 /*to make the buttons highlight over focus/hover */
 .button.traditionButton:hover, .button.traditionButton:focus, .button.workWithUsButton:hover, .button.workWithUsButton:focus, .button.acquaintButton:hover, .button.acquaintButton:focus, .button.meetTheTeamButton:hover, .button.meetTheTeamButton:hover {
 background-color: darkgray;
+}
+
+.appContentButton:hover {
+    background-color: lightgrey;
 }
 
 .contentOne{
@@ -175,13 +224,18 @@ background-color: darkgray;
 }
 
 .captionContent {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
+    padding: 0em 3em 0em 3em;
+}
+
+.statsContent > .cards {
+    margin: 0em 5em 0em 5em;
 }
 
 .cardImages {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     /*how to center an image!! */
     text-align: center;
     display: block;
@@ -278,37 +332,6 @@ table {
     font-weight: 600;
 }
 
-/*testing flickity.css for carousel*/
-/* external css: flickity.css */
-
-/*.carousel {
-  background: #FFFFFF;
-    margin-bottom: 2em;
-}
-
-.carousel-cell {
-  width: 66%;
-  height: 400px;
-  margin-right: 10px;
-  background: #FFFFFF;
-}
-
-.carousel-cell-image {
-  display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-} */
-
-/* fade in lazy loaded image */
-/* .carousel-cell-image.flickity-lazyloaded,
-.carousel-cell-image.flickity-lazyerror {
-  opacity: 1;
-} */
-
 .agentName {
     font-weight: 300;
     text-transform: none;
@@ -338,4 +361,160 @@ table {
   .carousel img {
     height: 400px;
   }
+}
+
+/*contactUs.html css */
+.tag {
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.numbers {
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+}
+
+.phoneFaxBanner {
+    background-color: rgb(255,139,98);
+    color: white;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+/* address panel */
+
+.address {
+    color: white;
+    background-image: url(images/addressBanner.png);
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 10em;
+    
+}
+
+.contactAddress {
+    font-size: 2em;
+    font-weight: 300;
+    padding-top: 2em;
+    padding-left: 18em;
+}
+
+.contactAddress > .tag {
+    font-size: 0.4em;
+}
+
+/*contact us form css */
+.contactForm {
+    background-color: rbg(255,139,98);
+}
+
+textarea {
+    border: none;
+    border-bottom-style: ;
+    border-bottom-width: 0.2em;
+    box-shadow: none;
+}
+
+.contactUs {
+    width: 40em;
+}
+
+.menubar {
+    border-style: none;
+    margin-top: 2em;
+}
+            /*contact Us form css */
+            
+.form-floating-label {
+  position: relative;
+  
+}
+
+.form-floating-label [type='text'],
+.form-floating-label [type='password'],
+.form-floating-label [type='date'],
+.form-floating-label [type='datetime'],
+.form-floating-label [type='datetime-local'],
+.form-floating-label [type='month'],
+.form-floating-label [type='week'],
+.form-floating-label [type='email'],
+.form-floating-label [type='number'],
+.form-floating-label [type='search'],
+.form-floating-label [type='tel'],
+.form-floating-label [type='time'],
+.form-floating-label [type='url'],
+.form-floating-label [type='color'],
+.form-floating-label textarea {
+  margin-bottom: 0;
+  color: #8a8a8a;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 30px 1rem 1rem 25px;
+}
+
+.form-floating-label label {
+  color: #cacaca;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 25px;
+  bottom: 0;
+  transition: all 0.2s ease-in;
+  font-weight: 300;
+}
+
+.form-floating-label textarea ~ label {
+  top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form-floating-label input:focus ~ label,
+.form-floating-label input:disabled[value] ~ label,
+.form-floating-label.has-value input ~ label {
+  top: 0;
+  font-size: 14px;
+  color: rgb(255,139,98);
+  font-weight: 400;
+}
+
+.form-floating-label textarea:focus ~ label,
+.form-floating-label.has-value textarea ~ label {
+  top: 0;
+  font-size: 14px;
+  color: dodgerblue;
+  font-weight: 400;
+}
+            
+            .contactForm {
+                padding-top: 3em;
+                padding-bottom: 3em;
+            }
+
+/*approach tab */
+.contactBanner {
+    padding-bottom: 6em;
+    color: grey;
+}
+
+.approachCaption {
+    padding-top: 4em;
+    color: grey;
+}
+
+.bannerQuote {
+    background-image: url(images/home-chicago-view1.jpg);
+}
+
+.quoteBanner {
+    padding-bottom: 3em;
+}
+
+.appContent {
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
