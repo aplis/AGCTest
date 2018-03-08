@@ -1,78 +1,229 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Silpa Vipparti">
-        <meta name="description" content="AGC home page v2.0">
-        
-        <!--personalised css -->
-        <link rel="stylesheet" href="homepage_css_v2.css">
-        
-        <!--flickity css -->
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
-        <!--flickity javascript-->
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
-        
-        <!--trying out zurb foundation for the first time -->
-        <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
-        
-        <!--zurb foundation javascript -->
-        <script src="foundation-6.4.2-complete/js/app.js"></script>
-    </head>
-    <body>
-<!-- This demo uses flex grid but you can use float grid too -->
+    <!DOCTYPE HTML>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="author" content="Silpa Vipparti">
+            <meta name="description" content="AGC home page v3.0">
+            <link rel="stylesheet" href="../../../Downloads/foundation-6.4.2-complete/css/foundation.css">
+            <!--personalised css -->
+            <link rel="stylesheet" href="css/example.css">
+            <link rel="stylesheet" href="homepage_css_v2.css">
+        <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/jquery.js"></script>
+            <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/what-input.js"></script> 
+            <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/foundation.min.js"></script> 
+            <script src="../../../Downloads/foundation-6.4.2-complete/js/app.js"></script> 
+        <script>$("[data-menu-underline-from-center] a").addClass("underline-from-center");</script>
+        <script>
+        $('.form-floating-label input, .form-floating-label textarea').focusin(function(){
+      $(this).parent().addClass('has-value');
+    });
 
-<div class="row">
-  <div class="columns">
-    <h2>Horizontal Tabs</h2>
-    <p>There are two pieces to a tabbed interface: the tabs themselves, and the content for each tab. The tabs are an element with the class <code>.tabs</code>, and each item has the class <code>.tabs-title</code>. Each tab contains a link to a tab. The <code>href</code> of each link should match the ID of a tab.</p>
-    <p>The tab content container has the class <code>.tabs-content</code>, while each section has the class <code>.tabs-panel</code>. Each content pane also has a unique ID, which is targeted by a link in the tabstrip.</p>
-    <p>Put it all together, and we get this:</p>
-  </div>
-</div>
+    $('.form-floating-label input, .form-floating-label textarea').blur(function(){
+      if(!$(this).val().length > 0) {
+        $(this).parent().removeClass('has-value');
+      }
+    });
+        </script>
+  <!-- End CSS for slidesjs.com example -->
 
-<div class="row">
-  <div class="columns">
-    <ul class="tabs" data-tabs id="example-tabs">
-      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-      <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
-      <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
-      <li class="tabs-title"><a href="#panel4">Tab 4</a></li>
-      <li class="tabs-title"><a href="#panel5">Tab 5</a></li>
-      <li class="tabs-title"><a href="#panel6">Tab 6</a></li>
-    </ul>
+  <!-- SlidesJS Optional: If you'd like to use this design -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+      padding-top:70px;
+    }
 
-    <div class="tabs-content" data-tabs-content="example-tabs">
-      <div class="tabs-panel is-active" id="panel1">
-        <p>One</p>
-        <p>Check me out! I'm a super cool Tab panel with text content!</p>
-      </div>
-      <div class="tabs-panel" id="panel2">
-        <p>Two</p>
-        <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-7.jpg">
-      </div>
-      <div class="tabs-panel" id="panel3">
-        <p>Three</p>
-        <p>Check me out! I'm a super cool Tab panel with text content!</p>
-      </div>
-      <div class="tabs-panel" id="panel4">
-        <p>Four</p>
-        <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-2.jpg">
-      </div>
-      <div class="tabs-panel" id="panel5">
-        <p>Five</p>
-        <p>Check me out! I'm a super cool Tab panel with text content!</p>
-      </div>
-      <div class="tabs-panel" id="panel6">
-        <p>Six</p>
-        <img class="thumbnail" src="//foundation.zurb.com/sites/docs/assets/img/generic/rectangle-8.jpg">
-      </div>
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(images/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 600px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 600px
+      }
+    }
+  </style>
+  <!-- SlidesJS Required: -->
+</head>
+<body>
+
+  <!-- SlidesJS Required: Start Slides -->
+  <!-- The container is used to define the width of the slideshow -->
+  <div class="container">
+    <div id="slides">
+      <img src="Team/Jenny.jpg">
+      <img src="Team/Kai.jpg">
+      <img src="Team/Maureen.jpg">
+      <img src="Team/Mike.jpg">
+        <img src="Team/Sarah.jpg">
+        <img src="Team/Violet.jpg">
     </div>
   </div>
-</div>
+  <!-- End SlidesJS Required: Start Slides -->
 
-    </body>
+  <!-- SlidesJS Required: Link to jQuery -->
+  <!-- SlidesJS Required: Link to jQuery -->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Link to jquery.slides.js -->
+  <script src="Slides-SlidesJS-3/source/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+        height: 528,
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true
+        }
+      });
+    });
+  </script>
+            
+        </body> 
 </html>

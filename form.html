@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Silpa Vipparti">
+        <meta name="description" content="AGC home page v3.0">
+        <link rel="stylesheet" href="../../../Downloads/foundation-6.4.2-complete/css/foundation.css">
+
+        <!--personalised css -->
+        <link rel="stylesheet" href="homepage_css_v2.css">
+        
+        <!--flickity css -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+        
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!--flickity javascript-->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+    </head>
+    <body>
+        
+        <form>
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Label</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="Inline Text Input">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+        
+    </body>
+    <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/jquery.js"></script>
+        <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/what-input.js"></script> 
+        <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/foundation.min.js"></script> 
+        <script src="../../../Downloads/foundation-6.4.2-complete/js/app.js"></script> 
+    <script>$("[data-menu-underline-from-center] a").addClass("underline-from-center");</script>
+    <script>
+    $('.form-floating-label input, .form-floating-label textarea').focusin(function(){
+  $(this).parent().addClass('has-value');
+});
+
+$('.form-floating-label input, .form-floating-label textarea').blur(function(){
+  if(!$(this).val().length > 0) {
+    $(this).parent().removeClass('has-value');
+  }
+});
+
+
+    </script>
