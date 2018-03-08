@@ -107,11 +107,6 @@
     padding-right: 0.5em;
 }
 
-/*frame css */
-.frame {
-    /* background-color: lightgray; */
-}
-
 /* first a.k.a introductory panel css */
 .intro { 
     background-image: url(images/cityscapeSample.jpg);
@@ -122,7 +117,7 @@
     margin-bottom: 3em;
 }
 
-.caption, #captionOne {
+.caption, .regularCaption {
     padding-top: 2em;
     text-transform: uppercase;
 }
@@ -133,7 +128,7 @@
 }
 
 /* customise the buttons and the hover color */
-.caption > button, .workWithUsButton, .acquaintButton, .meetTheTeamButton {
+.greyButton {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 0.1em;
@@ -143,7 +138,7 @@
     margin-top: 1em;
 }
 
-.appContentButton {
+.orangeButton {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 0.1em;
@@ -155,26 +150,28 @@
 }
 
 /*to make the buttons highlight over focus/hover */
-.button.traditionButton:hover, .button.traditionButton:focus, .button.workWithUsButton:hover, .button.workWithUsButton:focus, .button.acquaintButton:hover, .button.acquaintButton:focus, .button.meetTheTeamButton:hover, .button.meetTheTeamButton:hover {
+.button.greyButton:hover, .button.greyButton:focus {
 background-color: darkgray;
 }
 
-.appContentButton:hover {
-    background-color: lightgrey;
+.orangeButton:hover {
+    background-color: rgb(255,165,98);
+    border-color: rgb(255,165,98); 
 }
 
-.contentOne{
+#marginBottom {
+    margin-bottom: 7em;
+}
+
+.upperCaseCaption {
     justify-content: center;
     text-transform: uppercase;
-}
-
-#paragraphOne{
     font-weight: 500;
     font-size: 0.8em;
     letter-spacing: 0.2em;
 }
 
-#contentTwo {
+.regularSerif {
     margin-top: 4em;
     font-size: 1.7em;
     font-family: serif;
@@ -189,19 +186,20 @@ background-color: darkgray;
     margin-top: 3em;
 }
 
-.captionTwo, .captionThree {
+.sectionCaption {
     text-transform: uppercase;
     padding-top: 4em;
     margin-top: 1.5em;
 }
 
-#subcaptionTwo, #subcaptionThree, #subcaptionFour, .subCaption, .subCaptionAgent {
+.upperCaseSubCaption, .cardSubCaption, .subCaptionAgent {
     font-size: 0.8em;
     letter-spacing: 0.2em;
     text-align: center;
+    text-transform: uppercase; 
 }
 
-#captionTwoContent, #captionThreeContent {
+.upperCaseContent {
     font-family: serif;
     letter-spacing: 0.1em;
 }
@@ -223,10 +221,15 @@ background-color: darkgray;
     text-transform: uppercase;
 }
 
-.captionContent {
+.cardContent {
     font-size: 1em;
     text-align: center;
     padding: 0em 3em 0em 3em;
+}
+
+#approachCards {
+    width: 37%;
+    margin-bottom: 3em;
 }
 
 .statsContent > .cards {
@@ -282,7 +285,12 @@ background-color: darkgray;
     width: 50%;
 }
 
-.captionFour {
+#approachQuote {
+    width: 75%;
+    padding-bottom: 4em;
+}
+
+.sectionCaptionWhite {
     margin-top: 8em;
     color: white;
 }
@@ -298,17 +306,18 @@ background-color: darkgray;
     color: white;
 }
 
-td {
+.tableRow > td {
     background-color: gray;
     font-size: 0.7em;
     letter-spacing: 0.2em;
 }
 
-td > h3 {
+.tableRow> td > h3 {
     font-size: 2em;
     font-weight: 300;
 }
-table {
+
+#footerTable {
    border-style: dashed;
 }
 
@@ -340,9 +349,7 @@ table {
 
 /* external css: flickity.css */
 
-/* external css: flickity.css */
-
-* { box-sizing: border-box; }
+ { box-sizing: border-box; }
 
 .carousel {
     background: #FFF;
@@ -362,6 +369,7 @@ table {
     height: 400px;
   }
 }
+
 
 /*contactUs.html css */
 .tag {
@@ -388,19 +396,18 @@ table {
 
 .address {
     color: white;
-    background-image: url(images/addressBanner.png);
+    background-image: url(images/Contact-Address-Banner.png);
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
-    padding-bottom: 10em;
+    padding-bottom: 20em;
     
 }
 
 .contactAddress {
     font-size: 2em;
     font-weight: 300;
-    padding-top: 2em;
-    padding-left: 18em;
+    padding: 5em 0em 0em 28em;
 }
 
 .contactAddress > .tag {
@@ -417,10 +424,6 @@ textarea {
     border-bottom-style: ;
     border-bottom-width: 0.2em;
     box-shadow: none;
-}
-
-.contactUs {
-    width: 40em;
 }
 
 .menubar {
@@ -486,14 +489,50 @@ textarea {
 .form-floating-label.has-value textarea ~ label {
   top: 0;
   font-size: 14px;
-  color: dodgerblue;
+  color: rgb(255,139,98);
   font-weight: 400;
 }
-            
-            .contactForm {
-                padding-top: 3em;
-                padding-bottom: 3em;
-            }
+
+.dataCollection {
+    justify-content: center;
+    margin: auto;
+    width: 60em;
+}
+
+.dataCollection > table {
+    border-style: dashed;
+    border-color: transparent;
+    color: gray;
+    margin: 4em 0em 4em 0em;
+}
+
+#otherFormContent {
+    font-size: 1em;
+}
+
+#formLabel {
+    color: rgb(255,139,98);
+    text-transform: uppercase;
+}
+
+.formField {
+    width: 30em;
+}
+
+.formCaption {
+    width: 20em;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+#letsAcquaint > h3 {
+    font-family: serif;
+    text-transform: uppercase;
+}
+
+#sendMessage {
+    font-size: 1em;
+}
 
 /*approach tab */
 .contactBanner {
@@ -517,4 +556,13 @@ textarea {
 .appContent {
     padding-top: 2em;
     padding-bottom: 2em;
+}
+
+#agcQuote {
+    background-image: url(images/home-chicago-view1.jpg);
+}
+
+#approachQuoteOne {
+    text-transform: uppercase;
+    padding-bottom: 4em;
 }

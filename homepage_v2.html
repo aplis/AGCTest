@@ -1,371 +1,466 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Silpa Vipparti">
-        <meta name="description" content="AGC home page v3.0">
-        <link rel="stylesheet" href="../../../Downloads/foundation-6.4.2-complete/css/foundation.css">
-
-        <!--personalised css -->
-        <link rel="stylesheet" href="homepage_css_v2.css">
+    <!DOCTYPE HTML>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="author" content="Silpa Vipparti">
+            <meta name="description" content="AGC home page v3.0">
+            <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
+            <!--personalised css -->
+            <link rel="stylesheet" href="homepage_css_v2.css">
+            
+            <!--zurb foundation javascript -->
+            <script src="foundation-6.4.2-complete/js/app.js"></script>
         
-        <!--flickity css -->
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+         <!--flickity css -->
+         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+         
+         <!-- jQuery -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         
+         <!--flickity javascript-->
+         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+        </head>
         
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
-        <!--flickity javascript-->
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
-        <style>
-
-
-
-        </style>
-    </head>
-    <body>
-        <!-- header containing social network logos. first version contains facebook, youtube, twitter and linkedIn -->
-        <div class="grid-x grid-padding-x">
-            <div class="medium-12 large-12 cell header">
-                <img id="connectFb" src="images/FB-f-Logo__blue_100.png">  
-                <img id="connectYt" src="images/yt_icon_mono_dark.png">
-                <img id="connectTw" src="images/Twitter_Logo_WhiteOnBlue.png">
-                <img id="connectLd" src="images/In-White-41px-TM.png">
+        <body>
+            <!-- header containing social network logos. first version contains facebook, youtube, twitter and linkedIn -->
+            <div class="grid-x grid-padding-x">
+                <div class="medium-12 large-12 cell header">
+                    <img id="connectFb" src="images/FB-f-Logo__blue_100.png">  
+                    <img id="connectYt" src="images/yt_icon_mono_dark.png">
+                    <img id="connectTw" src="images/Twitter_Logo_WhiteOnBlue.png">
+                    <img id="connectLd" src="images/In-White-41px-TM.png">
+                </div>
             </div>
-        </div>
-        
-        <!--grid with sell, buy and logo with title. need a logo with better clarity -->
-        <div class="grid-container large-12 medium-12 small-12 fluid full mast">
-            <a href=#>
-                <!--creating a div for both 'buy' and 'sell' to fix the image and to layover the text. on hover, the image should change and the text should be of a different color to indicate it's active -->
-                <div class="placeholderSell">
-                    <!--<img class="features" id="sell" src="images/sell.png" alt="sell">
-                    <img class="featuresOnHover" id="sellOnHover" src="images/sell_on_hover.png" alt="sell on hover">-->
-                    <p class="featureHover" id="sellOnHover">SELL</p>
-                </div>
-            </a>
-            <a href=#>
-                <div class="placeholderBuy">
-                    <!--<img class="features" id="buy" src="images/buy.png" alt="buy">
-                    <img class="featuresOnHover" id="buyOnHover" src="images/buy_on_hover.png" alt="buy on hover">-->
-                    <p class="featureHover" id="buyOnHover">BUY</p>
-                </div>
-            </a>
-            <div class="logo text-center">
-                <img src="images/ACG_Logo_Green.png" alt="AGC logo and title"> <!-- Need a logo of this size in finer resolution -->
-            </div>
-        </div>
-        
-        <!--grid for menubar. Currently contiaing "Our approach" and "Contact Us" options -->
-        <div class="grid-container large-12 medium-12 text-center fluid full menubar">
-            <nav class="hover-underline-menu" data-menu-underline-from-center>
-                <ul class="tabs menu align-center" data-tabs id="optionTabs">
-                    <li class="tabs-title is-active"><a href="#homePage">HOME</a></li>
-                    <li class="tabs-title"><a href="#approach">OUR APPROACH</a></li>
-                    <li class="tabs-title"><a href="#contactUs">CONTACT US</a></li>
-                </ul>
-            </nav>
-            <div class="tabs-content" data-tabs-content="optionTabs">
-                <div class="tabs-panel is-active" id="homePage">
-                     <!--grid for introduction. need a background image and a button.-->
-            <div class="grid-container large-12 medium-12 small-12 fluid full intro sections">
-                <div class="large-10 medium-10 small-10 text-center caption">
-                    <h2 id="captionOne">Innovative residential real-estate services.</h2>
-                    <button class="button traditionButton" href="#">a chicago tradition<img src="images/long-arrow.png"></button>
-                </div>
-                <div class="grid-x grid-padding-x introContent">
-                    <div class="small-6 medium-6 large-6 text-center">
-                        <h2 class="contentOne">GENUINE. CHICAGO. LIVING.</h2>
-                        <p class="contentOne" id="paragraphOne">Our experts are known for an unmatched understanding of the Chicago market and a city that works-style dedication to quality and excellence.</p>
-                        <p id="contentTwo">Skillful negotiators, candid advisors, and well-connected networkers, at Ames Group Chicago we embrace a unique mix of innovation, history, dedication, and hospitality that informs our strategic approach to selling and buying Chicago's best residential real estate.</p>
+
+            <!--grid with sell, buy and logo with title. need a logo with better clarity -->
+            <div class="grid-container large-12 medium-12 small-12 fluid full mast">
+                <a href=#>
+                    <!--creating a div for both 'buy' and 'sell' to fix the image and to layover the text. on hover, the image should change and the text should be of a different color to indicate it's active -->
+                    <div class="placeholderSell">
+                        <!--<img class="features" id="sell" src="images/sell.png" alt="sell">
+                        <img class="featuresOnHover" id="sellOnHover" src="images/sell_on_hover.png" alt="sell on hover">-->
+                        <p class="featureHover" id="sellOnHover">SELL</p>
                     </div>
+                </a>
+                <a href=#>
+                    <div class="placeholderBuy">
+                        <!--<img class="features" id="buy" src="images/buy.png" alt="buy">
+                        <img class="featuresOnHover" id="buyOnHover" src="images/buy_on_hover.png" alt="buy on hover">-->
+                        <p class="featureHover" id="buyOnHover">BUY</p>
+                    </div>
+                </a>
+                <div class="logo text-center">
+                    <img src="images/ACG_Logo_Green.png" alt="AGC logo and title"> <!-- Need a logo of this size in finer resolution -->
                 </div>
             </div>
-       
-            <!--grid for statistics-->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
-                <div class="large-10 medium-10 small-10 text-center captionTwo">
-                    <p id="subcaptionTwo">we know the market like no one else.</p>
-                    <h2 id="captionTwoContent">our proven success</h2>
+            
+            <!--grid for menubar. Currently contiaing "Our approach" and "Contact Us" options -->
+            <div class="grid-container large-12 medium-12 text-center fluid full menubar">
+                <nav class="hover-underline-menu" data-menu-underline-from-center>
+                    <ul class="tabs menu align-center" data-tabs id="optionTabs">
+                        <li class="tabs-title is-active"><a href="#homePage">HOME</a></li>
+                        <li class="tabs-title"><a href="#approach">OUR APPROACH</a></li>
+                        <li class="tabs-title"><a href="#contactUs">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <div class="tabs-content" data-tabs-content="optionTabs">
+                    <div class="tabs-panel is-active" id="homePage">
+                         <!--grid for introduction. need a background image and a button.-->
+                <div class="grid-container large-12 medium-12 small-12 fluid full intro sections">
+                    <div class="large-10 medium-10 small-10 text-center caption">
+                        <h2 class="regularCaption">Innovative residential real-estate services.</h2>
+                        <button class="button greyButton" href="#">a chicago tradition<img src="images/long-arrow.png"></button>
                     </div>
-                <div class="grid-x grid-margin-x statsContent">
-                        <div class="cell small-12 medium-4 large-4 cards" id="cardOne">
-                            <p class="cardImages"><img src="images/home-sales-annual.png"></p>
-                            <p class="lead">$100 Million</p>
-                            <p class="subCaption">&#45;IN YEARLY SALES&#45;</p>
-                            <div class="captionContent">Our team has sold $100 Million of real estate a year, five year running.</div>
+                    <div class="grid-x grid-padding-x introContent">
+                        <div class="small-6 medium-6 large-6 text-center">
+                            <h2 class="contentOne">GENUINE. CHICAGO. LIVING.</h2>
+                            <p class="upperCaseCaption">Our experts are known for an unmatched understanding of the Chicago market and a city that works-style dedication to quality and excellence.</p>
+                            <p class="regularSerif">Skillful negotiators, candid advisors, and well-connected networkers, at Ames Group Chicago we embrace a unique mix of innovation, history, dedication, and hospitality that informs our strategic approach to selling and buying Chicago's best residential real estate.</p>
                         </div>
-                        <div class="cell small-12 medium-4 large-4 cards">
-                            <p class="cardImages"><img src="images/home-sales-career.png"></p>
-                            <p class="lead">$1.5 Billion</p>
-                            <p class="subCaption">&#45;IN CAREER SALES&#45;</p>
-                            <div class="captionContent">Jennifer Ames has sold $1.5 Billion of real estate over the course of her career.</div>
-                        </div>
-                </div>
-            </div>
-                    <!--grid for carousel to display the team members-->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full team sections">
-                <div class="large-10 medium-10 small-10 text-center captionTwo">
-                    <h2 id="captionTwoContent">our sales team</h2>
-                    <br>
-                    <p class="subCaptionAgent">sales &amp; resident foodie</p>
-                    
-                    <h2 class="agentName">&nbsp;</h2>
-                    <div class="carousel" data-flickity='{"wrapAround": true}'>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
                     </div>
-
                 </div>
+
+                <!--grid for statistics-->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
+                    <div class="large-10 medium-10 small-10 text-center sectionCaption">
+                        <p class="upperCaseSubCaption">we know the market like no one else.</p>
+                        <h2 class="upperCaseContent">our proven success</h2>
+                        </div>
+                    <div class="grid-x grid-margin-x statsContent">
+                            <div class="cell small-12 medium-4 large-4 cards" id="cardOne">
+                                <p class="cardImages"><img src="images/home-sales-annual.png"></p>
+                                <p class="lead">$100 Million</p>
+                                <p class="cardSubCaption">&#45;in yearly sales&#45;</p>
+                                <div class="cardContent">Our team has sold $100 Million of real estate a year, five year running.</div>
+                            </div>
+                            <div class="cell small-12 medium-4 large-4 cards">
+                                <p class="cardImages"><img src="images/home-sales-career.png"></p>
+                                <p class="lead">$1.5 Billion</p>
+                                <p class="cardSubCaption">&#45;in career sales&#45;</p>
+                                <div class="cardContent">Jennifer Ames has sold $1.5 Billion of real estate over the course of her career.</div>
+                            </div>
+                    </div>
+                </div>
+                 
+                        
+                                     <div class="grid-x grid-container large-12 medium-12 small-12 fluid full team sections">
+                 <div class="large-10 medium-10 small-10 text-center sectionCaption">
+                     <h2 class="upperCaseContent">our sales team</h2>
+                     <br>
+                     <p class="subCaptionAgent">sales &amp; resident foodie</p>
+                     
+                     <h2 class="agentName">&nbsp;</h2>
+                    <div class="carousel" data-flickity='{"autoPlay": true, "wrapAround": true}'>
+            
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
+                     </div>
+                </div>
+                                         
                 <!--grid for 'meet the team' button -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections meetTheTeam">
-                <button class="button meetTheTeamButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
-            </div>
-        </div>
-        
-            <!--grid for strategy-->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections">
-                <div class="large-10 medium-10 small-10 text-center captionThree">
-                    <p id="subcaptionThree">How Jennifer Ames Chicago:</p>
-                    <h2 id="captionThreeContent">Sells more. Buys smarter.</h2>
+             <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections meetTheTeam">
+                 <button class="button greyButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
+             </div>
+                                         
+                <!--grid for strategy-->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections">
+                    <div class="large-10 medium-10 small-10 text-center sectionCaption">
+                        <p class="upperCaseSubCaption">How Jennifer Ames Chicago:</p>
+                        <h2 class="upperCaseContent">Sells more. Buys smarter.</h2>
+                        </div>
+                    <div class="grid-x grid-margin-x strategyContent">
+                            <div class="cell small-12 medium-4 large-4 cards">
+                                <p class="cardImages"><img src="images/strategy.png"></p>
+                                <p class="lead">Customized Strategies</p>
+                                <p class="captionContent">Never one-size-fits-all, a JAC marketing strategy maximizes every opportunity with a unique mix of online technology, public relations, and advertising solutions.</p>
+                            </div>
+                            <div class="cell small-12 medium-4 large-4 cards">
+                                <p class="cardImages"><img src="images/proactive.png"></p>
+                                <p class="lead">Proactive &amp; Solution Oriented</p>
+                                <p class="captionContent">We don't wait for problems to present themselves. We are always assessing our strategies and tweaking them in tandem with market trends and feedback from potential buyers.</p>
+                            </div>
+                            <div class="cell small-12 medium-4 large-4 cards">
+                                <p class="cardImages"><img src="images/takes.png"></p>
+                                <p class="lead">Whatever It Takes</p>
+                                <p class="captionContent">This is our motto, and we mean it. We believe that doing what's right trumps doing what's easy. Our unwavering dedication to a job well is the cornerstone of our success story.</p>
+                            </div>
+
                     </div>
-                <div class="grid-x grid-margin-x strategyContent">
-                        <div class="cell small-12 medium-4 large-4 cards">
-                            <p class="cardImages"><img src="images/strategy.png"></p>
-                            <p class="lead">Customized Strategies</p>
-                            <p class="captionContent">Never one-size-fits-all, a JAC marketing strategy maximizes every opportunity with a unique mix of online technology, public relations, and advertising solutions.</p>
-                        </div>
-                        <div class="cell small-12 medium-4 large-4 cards">
-                            <p class="cardImages"><img src="images/proactive.png"></p>
-                            <p class="lead">Proactive &amp; Solution Oriented</p>
-                            <p class="captionContent">We don't wait for problems to present themselves. We are always assessing our strategies and tweaking them in tandem with market trends and feedback from potential buyers.</p>
-                        </div>
-                        <div class="cell small-12 medium-4 large-4 cards">
-                            <p class="cardImages"><img src="images/takes.png"></p>
-                            <p class="lead">Whatever It Takes</p>
-                            <p class="captionContent">This is our motto, and we mean it. We believe that doing what's right trumps doing what's easy. Our unwavering dedication to a job well is the cornerstone of our success story.</p>
-                        </div>
+                </div>
 
+                <!--grid for 'work with us' button -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections workWithUs">
+                    <button class="button greyButton" href="#">work with us<img src="images/long-arrow.png"></button>
                 </div>
-            </div>
-        
-            <!--grid for 'work with us' button -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections workWithUs">
-                <button class="button workWithUsButton" href="#">work with us<img src="images/long-arrow.png"></button>
-            </div>
-        
-            <!--grid for 'acquainted' panel -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
-                <div class="large-10 medium-10 small-10 text-center captionFour">
-                    <p id="subcaptionFour">&#45;Jennifer Ames&#45;</p>
-                    <!--no captionFour -->
-                    <h2 class="quote"><q>Above all, we believe in the values of being genuine and honest.</q></h2>         
-                    <button class="button acquaintButton" href="#">let's get acquainted<img src="images/long-arrow.png"></button>
-                </div>
-            </div>
 
+                <!--grid for 'acquainted' panel -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
+                    <div class="large-10 medium-10 small-10 text-center sectionCaptionWhite">
+                        <p class="upperCaseSubCaption">&#45;Jennifer Ames&#45;</p>
+                        <!--no captionFour -->
+                        <h2 class="quote"><q>Above all, we believe in the values of being genuine and honest.</q></h2>         
+                        <button class="button greyButton" id="marginBottom" href="#">let's get acquainted<img src="images/long-arrow.png"></button>
+                    </div>
                 </div>
-                
-                <!--approach tab-->
-                <div class="tabs-panel" id="approach">
-                    
-                    <!--grid for 'acquainted' panel -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
-                <div class="large-10 medium-10 small-10 text-center captionFour">
-                    <p class="approachCaption" id="subcaptionFour">&#45;Sell faster. Buy Smarter.&#45;</p>
-                    <!--no captionFour -->
-                    <h2 class="quote contactBanner"><q>We see the opportunity.</q></h2>         
+                             <!--grid for footer panel -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections footer">
+                    <div class="cell small-12 medium-12 large-5 contact">
+                        <!--footer logo and caption needed-->
+                        <!--social network logos in white needed with a circular frame. phase 1 requires fb, twitter, youtube and linkedin -->
+                    </div>
+                    <div class="cell small-12 medium-12 large-7 footerTable">
+                        <table id="footerTable">
+                            <tr class="tableRow">
+                                <td><h3>About</h3></td>
+                                <td><h3>Homes</h3></td> 
+                                <td><h3>Our Approach</h3></td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>MEET JENNY</td>
+                                <td>COLLECTIONS</td> 
+                                <td>SELL WITH US</td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>COLDWELL BANKER</td>
+                                <td>HOMES</td> 
+                                <td>BUY WITH US</td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>OUR TEAM</td>
+                                <td></td> 
+                                <td>CONTACT US</td>
+                            </tr>           
+                            <tr class="tableRow">
+                                <td>PRESS</td>
+                            </tr>
+                        </table>
+                    </div>
+                     <div class="cell small-12 medium-12 large-12 disclaimer">
+                            <img src="images/coldwell-banker-logo.png" id="coldwellBankerLogo"> 
+                            <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
+                    </div>
                 </div>
-            </div>
-    
-<!--grid for statistics-->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
-                <div class="grid-x grid-margin-x statsContent">
-                        <div class="cell small-12 medium-4 large-4 cards appContent" id="cardOne">
-                            <p class="subCaption">&#45;WHIP SMART &#124; ON-POINT &#124; HIGH-TOUCH&#45;</p>
-                            <p class="lead">Our Sales Style</p>
-                            <div class="captionContent">Selling homes is more than 60% of our business, so we maximise every oppportunity. We know that our clients appreicate speed and efficiency - and we deliver. We listen to goals, analyze the most advantageous market price, advise on strategy, and negotiate the best terms.</div>
-                            <button class="button appContentButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
-                        </div>
-                    <div class="cell small-12 medium-4 large-4 cards appContent" id="cardOne">
-                            <p class="subCaption">&#45;WE ARE AN OPEN BOOK&#45;</p>
-                            <p class="lead">Our Buying Style</p>
-                            <div class="captionContent">We don't persuade our clients to buy homes. We want to do what's in our clients' best interest- that's how we all win. We honestly weigh the pros and cons of each property before our client makes their decision to buy. Knowledge,after all is power.</div>
-                        <button class="button appContentButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
-                        </div>
-                </div>
-            </div>
 
-                    <!--grid for 'acquainted' panel -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint bannerQuote">
-                <div class="large-10 medium-10 small-10 text-center captionFour">
-                    <p id="subcaptionFour">&#45;Jennifer Ames&#45;</p>
-                    <!--no captionFour -->
-                    <h2 class="quoteBanner quote"><q>A simple commitment to candor and integrity has been the hallmark of Ames Group Chicago for more than two decades.</q></h2>         
-                </div>
-            </div>
+                    </div>
+                    </div>
+                    <!--approach tab-->
+                    <div class="tabs-panel" id="approach">                       
                     
 <!--grid for 'acquainted' panel -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
-                <div class="large-10 medium-10 small-10 text-center captionFour">
-                    <p id="subcaptionFour">&#45;Jennifer Ames&#45;</p>
-                    <!--no captionFour -->
-                    <h2 class="quote"><q>Above all, we believe in the values of being genuine and honest.</q></h2>         
-                    <button class="button acquaintButton" href="#">let's get acquainted<img src="images/long-arrow.png"></button>
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint" id="agcQuote">
+                    <div class="large-10 medium-10 small-10 text-center sectionCaptionWhite">
+                        <p class="upperCaseSubCaption">&#45;sell faster. buy smarter.&#45;</p>
+                        <!--no captionFour -->
+                        <h2 class="quote" id="approachQuoteOne"><q>we see the opportunity</q></h2>         
+                    </div>
+                </div>                        
+                        
+                    <!--grid for statistics-->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full stats sections">
+                    <div class="grid-x grid-margin-x statsContent">
+                            <div class="cell small-12 medium-4 large-4 cards" id="approachCards">
+                                <p class="cardSubCaption">&#45; whip smart &#124; on-point &#124; high-touch &#45;</p>
+                                <p class="lead">Our Sales Style</p>
+                                <div class="cardContent">Selling homes is more than 60% of our business, so we maximise every opportunity. We know that our clients appreciate speed and efficiency - and we deliver. We listen to goals, analyse the most advantageous market price, advise on strategy, and negotiate the best terms.</div>
+                                <button class="button orangeButton" id="sendMessage" href="#">sell with us<img src="images/long-arrow.png"></button>
+                            </div>
+                            <div class="cell small-12 medium-4 large-4 cards" id="approachCards">
+                                <p class="cardSubCaption">&#45;we are an open book&#45;</p>
+                                <p class="lead">Our Buying Style</p>
+                                <div class="cardContent">We don't persuade or convince our clients to buy homes. We want to do what's in our clients' best interest- that's how we all win. We honestly weigh the pros and cons of each property before our client makes their decision to buy. Knowledge, after all is power.</div>
+                                <button class="button orangeButton" id="sendMessage" href="#">buy with us<img src="images/long-arrow.png"></button>
+                            </div>
+                    </div>
                 </div>
-            </div>
-
-                    
-                    
+                        
+                    <!--grid for 'acquainted' panel -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint" id="agcQuote">
+                    <div class="large-10 medium-10 small-10 text-center sectionCaptionWhite">
+                        <p class="upperCaseSubCaption">&#45;Jennifer Ames&#45;</p>
+                        <!--no captionFour -->
+                        <h2 class="quote" id="approachQuote"><q>A simple commitment to candor and integrity has been the hallmark of Ames group chicago for more than two decades.</q></h2>         
+                    </div>
+                </div>    
+                        
+<!--grid for 'acquainted' panel -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full sections acquaint">
+                    <div class="large-10 medium-10 small-10 text-center sectionCaptionWhite">
+                        <p class="upperCaseSubCaption">&#45;Jennifer Ames&#45;</p>
+                        <!--no captionFour -->
+                        <h2 class="quote"><q>Above all, we believe in the values of being genuine and honest.</q></h2>         
+                        <button class="button greyButton" id="marginBottom" href="#">let's get acquainted<img src="images/long-arrow.png"></button>
+                    </div>
                 </div>
                 
-                <!--contact us tab -->
-                <div class="tabs-panel" id="contactUs">
-                    <!-- breadcrumbs section -->
-        <div class="grid-container large-12 medium-12 fluid full breadcrumbs">
-            <nav aria-label="You are here:" role="navigation">
-                <ul class="breadcrumbs">
-                    <li><a href="homepage_v2.html">Home</a></li>
-                    <li>
-                        <span class="show-for-sr">Current: </span> Contact Us
-                    </li>
-                </ul>
-            </nav>
+                             <!--grid for footer panel -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections footer">
+                    <div class="cell small-12 medium-12 large-5 contact">
+                        <!--footer logo and caption needed-->
+                        <!--social network logos in white needed with a circular frame. phase 1 requires fb, twitter, youtube and linkedin -->
+                    </div>
+                    <div class="cell small-12 medium-12 large-7 footerTable">
+                        <table id="footerTable">
+                            <tr class="tableRow">
+                                <td><h3>About</h3></td>
+                                <td><h3>Homes</h3></td> 
+                                <td><h3>Our Approach</h3></td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>MEET JENNY</td>
+                                <td>COLLECTIONS</td> 
+                                <td>SELL WITH US</td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>COLDWELL BANKER</td>
+                                <td>HOMES</td> 
+                                <td>BUY WITH US</td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>OUR TEAM</td>
+                                <td></td> 
+                                <td>CONTACT US</td>
+                            </tr>           
+                            <tr class="tableRow">
+                                <td>PRESS</td>
+                            </tr>
+                        </table>
+                    </div>
+                     <div class="cell small-12 medium-12 large-12 disclaimer">
+                            <img src="images/coldwell-banker-logo.png" id="coldwellBankerLogo"> 
+                            <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
+                    </div>
+                </div>
+                    </div>
+
+                    <!--contact us tab -->
+                    <div class="tabs-panel" id="contactUs">  
+    
+            <!-- phone and fax numbers banner -->
+            <div class="grid-container large-12 medium-12 text-center fluid full phoneFaxBanner sections">
+                <p><span class="tag">Phone </span><span class="numbers">(312) 440-7525      &#124;</span> <span class="tag">Fax </span><span class="numbers">(312) 440-7535</span></p>
+            </div>
+
+            <!--grid for 'contact us' form -->
+            <div class="grid-container large-12 medium-12 small-12 text-center fluid full contactUs">
+                <div class="dataCollection">
+                <table class="unstriped">
+                    <tr>
+                        <td>
+                            <div class="formCaption" id="letsAcquaint"><h3>Let's get acquainted</h3></div>
+                        </td>
+                        <td>
+                            <div class="small-12 medium-12 large-12 formField">
+                                <div class="row form-floating-label">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Your Name</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formCaption">And have a chat</td>
+                        <td>
+                                           <div class="small-12 medium-12 large-12 column formField">
+          <div class="form-floating-label">
+            <textarea name="" id="" rows="5" placeholder=""></textarea>
+            <label for="textarea">Your Message</label>
+          </div>
         </div>
-        
-        <!-- phone and fax numbers banner -->
-        <div class="grid-container large-12 medium-12 text-center fluid full phoneFaxBanner sections">
-            <p><span class="tag">Phone </span><span class="numbers">(312) 440-7525      &#124;</span> <span class="tag">Fax </span><span class="numbers">(312) 440-7535</span></p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formCaption">Where can we write to you?</td>
+                        <td>
+                            <div class="small-12 medium-12 large-12 column formField">
+          <div class="form-floating-label">
+            <input type="text" id="password" name="password">
+            <label for="password">Your Email address</label>
+          </div>
+        </div> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formCaption">Where can we call you?</td>
+                        <td>
+                                          <div class="small-12 medium-12 large-12 column formField">
+          <div class="form-floating-label">
+            <input type="tel" id="tel" name="tel">
+            <label for="tel">Your Phone Number</label>
+          </div>
         </div>
-        
-        <!--grid for 'contact us' form -->
-        <div class="grid-container large-8 medium-8 small-8 text-center fluid full contactUs">
-            <form class="contactForm" action="">
-  <div class="row">
-    <div class="small-12 column">
-      <div class="form-floating-label">
-        <input type="email" id="email" name="email" required>
-        <label for="email">Your Name</label>
-      </div>
-    </div>
-    <div class="small-12 column">
-      <div class="form-floating-label">
-        <input type="text" id="password" name="password">
-        <label for="password">Your Email address</label>
-      </div>
-    </div>
-    <div class="small-12 column">
-      <div class="form-floating-label">
-        <input type="tel" id="tel" name="tel">
-        <label for="tel">Your Phone Number</label>
-      </div>
-    </div>
-    <div class="small-12 column">
-      <div class="form-floating-label">
-        <textarea name="" id="" rows="5" placeholder=""></textarea>
-        <label for="textarea">Your Message</label>
-      </div>
-    </div>
-      <button class="button appContentButton" href="#">Meet our team<img src="images/long-arrow.png"></button>
-  </div>
-</form>
-        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formCaption" id="otherFormContent">Stay updated with Private Listings, New Listings and Other Opportunities <br>
+                        </td>
+                        <div class="small-12 medium-12 large-12 column formField">
+                            <td> 
+                                <input id="checkbox1" type="checkbox"><label for="checkbox1" id="formLabel">Subscribe to our newsletter</label>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><button class="button orangeButton" id="sendMessage" href="#">Send your message<img src="images/long-arrow.png"></button></td>
+                    </tr>
+                </table>
+                </div>
+                
+            </div>
+
+            <!-- grid for displaying address -->
+            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full address sections">   
+                        <p class="contactAddress"><span class="tag">coldwell banker &#124; lincoln park plaza<br></span>1910 North Clybourn Avenue<br>Chicago, Il 60614</p>
+            </div>
+                
+                <!--grid for footer panel -->
+                <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections footer">
+                    <div class="cell small-12 medium-12 large-5 contact">
+                        <!--footer logo and caption needed-->
+                        <!--social network logos in white needed with a circular frame. phase 1 requires fb, twitter, youtube and linkedin -->
+                    </div>
+                    <div class="cell small-12 medium-12 large-7 footerTable">
+                        <table id="footerTable">
+                            <tr class="tableRow">
+                                <td><h3>About</h3></td>
+                                <td><h3>Homes</h3></td> 
+                                <td><h3>Our Approach</h3></td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>MEET JENNY</td>
+                                <td>COLLECTIONS</td> 
+                                <td>SELL WITH US</td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>COLDWELL BANKER</td>
+                                <td>HOMES</td> 
+                                <td>BUY WITH US</td>
+                            </tr>
+                            <tr class="tableRow">
+                                <td>OUR TEAM</td>
+                                <td></td> 
+                                <td>CONTACT US</td>
+                            </tr>           
+                            <tr class="tableRow">
+                                <td>PRESS</td>
+                            </tr>
+                        </table>
+                    </div>
+                     <div class="cell small-12 medium-12 large-12 disclaimer">
+                            <img src="images/coldwell-banker-logo.png" id="coldwellBankerLogo"> 
+                            <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
+                    </div>
+                </div>
+                        
+                    </div>
+            </div>
             
-        
-        
-        <!-- grid for displaying address -->
-        <div class="grid-x grid-container large-12 medium-12 small-12 fluid full address sections">
-            <p class="contactAddress"><span class="tag">coldwell banker &#124; lincoln park plaza<br></span>
-            1910 North Clybourn Avenue<br>Chicago, Il 60614</p>
-        </div>
-                </div>
             </div>
-        </div>
-                
-            <!--grid for footer panel -->
-            <div class="grid-x grid-container large-12 medium-12 small-12 fluid full strategy sections footer">
-                <div class="cell small-12 medium-12 large-5 contact">
-                    <!--footer logo and caption needed-->
-                    <!--social network logos in white needed with a circular frame. phase 1 requires fb, twitter, youtube and linkedin -->
-                </div>
-                <div class="cell small-12 medium-12 large-7 footerTable">
-                    <table>
-                        <tr class="tableRow">
-                            <td><h3>About</h3></td>
-                            <td><h3>Homes</h3></td> 
-                            <td><h3>Our Approach</h3></td>
-                        </tr>
-                        <tr class="tableRow">
-                            <td>MEET JENNY</td>
-                            <td>COLLECTIONS</td> 
-                            <td>SELL WITH US</td>
-                        </tr>
-                        <tr class="tableRow">
-                            <td>COLDWELL BANKER</td>
-                            <td>HOMES</td> 
-                            <td>BUY WITH US</td>
-                        </tr>
-                        <tr class="tableRow">
-                            <td>OUR TEAM</td>
-                            <td></td> 
-                            <td>CONTACT US</td>
-                        </tr>           
-                        <tr class="tableRow">
-                            <td>PRESS</td>
-                        </tr>
-                    </table>
-                </div>
-                 <div class="cell small-12 medium-12 large-12 disclaimer">
-                        <img src="images/coldwell-banker-logo.png" id="coldwellBankerLogo"> 
-                        <p class="statement">&copy; 1993-2017 AMES GROUP CHICAGO. ALL RIGHTS RESERVED. <a id="disclaimer" href="#">DISCLAIMER</a></p>
-                </div>
-            </div> 
-        
-        <script>
-        
-        var $carousel = $('.carousel').flickity({
-  cellSelector: 'img',
-  imagesLoaded: true,
-  percentPosition: false
-});
-var $caption = $('.agentName');
-var $subCaption = $('.subCaptionAgent');
-// Flickity instance
-var flkty = $carousel.data('flickity');
-
-$carousel.on( 'select.flickity', function() {
-  // set image caption using img's alt
-    var $displayText = flkty.selectedElement.alt;
-  $caption.text( $displayText );
-    if ($displayText.toLowerCase() === 'orange tree'.toLowerCase()) {
-        $subCaption.text('caption 1');
-    }
-    else if ($displayText.toLowerCase() === 'submerged'.toLowerCase()) {
-        $subCaption.text('caption 2');
-    }
-    else if ($displayText.toLowerCase() === 'look-out'.toLowerCase()) {
-        $subCaption.text('caption 3');
-    }
-    else if ($displayText.toLowerCase() === 'ONe World Trade'.toLowerCase()) {
-        $subCaption.text('caption 4');
-    }
-    else if ($displayText.toLowerCase() === 'drizzle'.toLowerCase()) {
-        $subCaption.text('caption 5');
-    }
-    else if ($displayText.toLowerCase() === 'cAT NOSe'.toLowerCase()) {
-        $subCaption.text('caption 6');
-    }
-});
-    </script>
+        <script>       
+            var $carousel = $('.carousel').flickity({
+   cellSelector: 'img',
+   imagesLoaded: true,
+   percentPosition: false
+ });
+ var $caption = $('.agentName');
+ var $subCaption = $('.subCaptionAgent');
+ // Flickity instance
+ var flkty = $carousel.data('flickity');
+ 
+ $carousel.on( 'select.flickity', function() {
+   // set image caption using img's alt
+     var $displayText = flkty.selectedElement.alt;
+   $caption.text( $displayText );
+     if ($displayText.toLowerCase() === 'orange tree'.toLowerCase()) {
+         $subCaption.text('caption 1');
+     }
+     else if ($displayText.toLowerCase() === 'submerged'.toLowerCase()) {
+         $subCaption.text('caption 2');
+     }
+     else if ($displayText.toLowerCase() === 'look-out'.toLowerCase()) {
+         $subCaption.text('caption 3');
+     }
+     else if ($displayText.toLowerCase() === 'ONe World Trade'.toLowerCase()) {
+         $subCaption.text('caption 4');
+     }
+     else if ($displayText.toLowerCase() === 'drizzle'.toLowerCase()) {
+         $subCaption.text('caption 5');
+     }
+     else if ($displayText.toLowerCase() === 'cAT NOSe'.toLowerCase()) {
+         $subCaption.text('caption 6');
+     }
+ });
+  </script>
     </body> 
-    <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/jquery.js"></script>
-        <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/what-input.js"></script> 
-        <script src="../../../Downloads/foundation-6.4.2-complete/js/vendor/foundation.min.js"></script> 
-        <script src="../../../Downloads/foundation-6.4.2-complete/js/app.js"></script> 
+    <script src="foundation-6.4.2-complete/js/vendor/jquery.js"></script>
+        <script src="foundation-6.4.2-complete/js/vendor/what-input.js"></script> 
+        <script src="foundation-6.4.2-complete/js/vendor/foundation.min.js"></script> 
+        <script src="foundation-6.4.2-complete/js/app.js"></script> 
     <script>$("[data-menu-underline-from-center] a").addClass("underline-from-center");</script>
     <script>
     $('.form-floating-label input, .form-floating-label textarea').focusin(function(){
@@ -377,8 +472,9 @@ $('.form-floating-label input, .form-floating-label textarea').blur(function(){
     $(this).parent().removeClass('has-value');
   }
 });
-
-
-    </script>
+ 
+ 
+     </script>
     
-</html>
+
+    </html>
