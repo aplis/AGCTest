@@ -7,7 +7,7 @@
 
 .header > img {
     width: 1.6em;
-    margin-left: 1em;
+    margin-left: 0.3em;
 }
 
 .logo {
@@ -112,7 +112,7 @@
 
 /* first a.k.a introductory panel css */
 .intro { 
-    background-image: url(images/cityscapeSample.jpg);
+    background-image: url(images/cityscapeSample.png);
     background-size: cover;
     max-height: 100%;
     max-width: 100%;
@@ -181,8 +181,9 @@ background-color: darkgray;
 }
 
 .regularSerif {
-    margin-top: 4em;
-    font-size: 1.7em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
     font-family: serif;
 }
 
@@ -228,13 +229,6 @@ background-color: darkgray;
     font-size: 2.3em;
     font-weight: 300;
     text-align: center;
-}
-
-#subcaptionFour {
-    font-size: 0.8em;
-    letter-spacing: 0.2em;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 .cardContent {
@@ -331,13 +325,17 @@ background-color: darkgray;
 
 .tableRow > td {
     background-color: #928c8b;
-    font-size: 0.7em;
+    font-size: 0.8em;
     letter-spacing: 0.2em;
 }
 
 .tableRow> td > h3 {
     font-size: 2em;
     font-weight: 300;
+}
+
+.tableRow > td:hover {
+    color: darkseagreen;
 }
 
 #footerTable {
